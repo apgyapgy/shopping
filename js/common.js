@@ -15,7 +15,7 @@ var clearSession = function () {
       showCancel: false,
       success: function (res) {
         wx.navigateTo({
-          url: '../index/index',
+          url: '../login/login',
         });
       }
     });

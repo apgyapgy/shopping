@@ -1,12 +1,17 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/template/tabbar",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/order/order",
+    "pages/shoppingcat/shoppingcart",
+    "pages/my/my"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#24affd",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"#ffffff"
+    "navigationBarTextStyle": "#ffffff"
   }
 }

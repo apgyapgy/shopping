@@ -11,7 +11,7 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        if (res.code) {
+        /*if (res.code) {
           //发起网络请求d
           wx.request({
             url: common.baseUrl+'wx_we/openid',
@@ -25,7 +25,7 @@ App({
           })
         } else {
           console.log('获取用户登录态失败！' + res.errMsg)
-        }
+        }*/
       }
     })
     // 获取用户信息
