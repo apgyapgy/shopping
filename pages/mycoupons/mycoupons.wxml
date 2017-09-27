@@ -1,0 +1,24 @@
+<!--pages/mycoupons/mycoupons.wxml-->
+<view class="coupon-head">
+  <view bindtap="changeTab" data-index="1" class="not-used {{activeTab==1?'active':''}}">未使用</view>
+  <view bindtap="changeTab" data-index="2" class="used {{activeTab==2?'active':''}}">已使用</view>
+  <view bindtap="changeTab" data-index="3" class="expired {{activeTab==3?'active':''}}">已过期</view> 
+</view>
+
+<view class="coupon-body">
+  <view class="coupon">
+    <view class="coupon-left">
+      <view class="select"></view>
+    </view>
+    <view class="coupon-right"></view>
+  </view>
+  <view class="coupon">
+    <view class="coupon-left">
+      <view class="select active">
+        <image src="../../image/success.png"/>
+        <!--<icon type="success" size="20" color="rgb(38,177,254)"/>-->
+      </view>
+    </view>
+    <view class="coupon-right"></view>
+  </view>
+</view>

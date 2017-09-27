@@ -1,5 +1,6 @@
 <!--index.wxml-->
-<view class="container">
+
+  <scroll-view class="scrollview" scroll-top="{{scrollTop}}" scroll-y bindscroll="checkBackTop">
     <!--banner-->
     <swiper class="banner" indicator-dots="{{indicatorDots}}"
       autoplay="{{autoplay}}" >
@@ -9,6 +10,13 @@
         </swiper-item>
       </block>
     </swiper>
+
+    <!--定位-->
+    <view class="location">
+      <image class="location-icon" src="../../image/location.png"/>
+      <text class="location-name">申江豪城</text>
+      <image class="location-down-icon" src="../../image/down.png"/>
+    </view>
 
     <!--title-->
     <view class="con-title">
@@ -113,6 +121,99 @@
           <text class='enter'>立即进入 ></text>
         </view>
       </view>
+      <view class="shop">
+        <view class='shop-left'>
+          <image src='../../image/shop-img.png'/>
+        </view>
+        <view class='shop-right'>
+          <view class='shop-top'>
+            <view class='brand'>品牌</view>
+            <view class='name'>南北干货（五谷杂粮）</view>
+          </view>
+          <view class='shop-intro-wrapper'><text class='shop-intro'>下班不逛南北干货,五谷杂粮送到家</text></view>
+          <text class='shop-send'>0元起送，0元配送费</text>
+          <text class='enter'>立即进入 ></text>
+        </view>
+      </view>
+      <view class="shop">
+        <view class='shop-left'>
+          <image src='../../image/shop-img.png'/>
+        </view>
+        <view class='shop-right'>
+          <view class='shop-top'>
+            <view class='brand'>品牌</view>
+            <view class='name'>世纪华联（食品百货）</view>
+          </view>
+          <view class='shop-intro-wrapper'>
+            <text class='shop-intro'>上班逛超市,快递柜帮你收</text>
+          </view>
+          <text class='shop-send'>0元起送，0元配送费</text>
+          <text class='enter'>立即进入 ></text>
+        </view>
+      </view>
+      <view class="shop">
+        <view class='shop-left'>
+          <image src='../../image/shop-img.png'/>
+        </view>
+        <view class='shop-right'>
+          <view class='shop-top'>
+            <view class='brand'>品牌</view>
+            <view class='name'>南北干货（五谷杂粮）</view>
+          </view>
+          <view class='shop-intro-wrapper'>
+            <text class='shop-intro'>下班不逛南北干货,五谷杂粮送到家</text>
+          </view>
+          <text class='shop-send'>0元起送，0元配送费</text>
+          <text class='enter'>立即进入 ></text>
+        </view>
+      </view>
+      <view class="shop">
+        <view class='shop-left'>
+          <image src='../../image/shop-img.png'/>
+        </view>
+        <view class='shop-right'>
+          <view class='shop-top'>
+            <view class='brand'>品牌</view>
+            <view class='name'>世纪华联（食品百货）</view>
+          </view>
+          <view class='shop-intro-wrapper'>
+            <text class='shop-intro'>上班逛超市,快递柜帮你收</text>
+          </view>
+          <text class='shop-send'>0元起送，0元配送费</text>
+          <text class='enter'>立即进入 ></text>
+        </view>
+      </view><view class="shop">
+        <view class='shop-left'>
+          <image src='../../image/shop-img.png'/>
+        </view>
+        <view class='shop-right'>
+          <view class='shop-top'>
+            <view class='brand'>品牌</view>
+            <view class='name'>南北干货（五谷杂粮）</view>
+          </view>
+          <view class='shop-intro-wrapper'>
+            <text class='shop-intro'>下班不逛南北干货,五谷杂粮送到家</text>
+          </view>
+          <text class='shop-send'>0元起送，0元配送费</text>
+          <text class='enter'>立即进入 ></text>
+        </view>
+      </view>
+      <view class="shop">
+        <view class='shop-left'>
+          <image src='../../image/shop-img.png'/>
+        </view>
+        <view class='shop-right'>
+          <view class='shop-top'>
+            <view class='brand'>品牌</view>
+            <view class='name'>世纪华联（食品百货）</view>
+          </view>
+          <view class='shop-intro-wrapper'>
+            <text class='shop-intro'>上班逛超市,快递柜帮你收</text>
+          </view>
+          <text class='shop-send'>0元起送，0元配送费</text>
+          <text class='enter'>立即进入 ></text>
+        </view>
+      </view>
     </view>
 
     <!--暂无商铺-->
@@ -121,26 +222,12 @@
       <text>该小区附近暂无商铺(收件宝快递柜）</text>
       <text>请尝试切换其他小区</text>
     </view>
-
+  </scroll-view>
     <!--返回顶部-->
-    <image catchtap="goTop" class='top' src='../../image/top.png'/>
-    <!--footer-->
-    <view class='footer'>
-      <navigator class='home active' url="/page/index/index" hover-class="navigator-hover">
-        <image src='../../image/home_active.jpg'/>
-        <text>首页</text>
-      </navigator>
-      <navigator class='car' url="/page/shoppingcat/shoppingcart" hover-class="navigator-hover">
-        <image src='../../image/car.png'/>
-        <text>购物车</text>
-      </navigator>
-      <navigator class='order' url="/page/order/order" hover-class="navigator-hover">
-        <image src='../../image/order.png'/>
-        <text>订单</text>
-      </navigator>
-      <navigator class='my' url="/page/my/my" hover-class="navigator-hover">
-        <image src='../../image/my.png'/>
-        <text>我的</text>
-      </navigator>
-    </view>
-</view>
+    {{item.active==true?'active':''}}
+    <image catchtap="goTop" class="'top' {{backTopIconShowFlag==true?'active':''}}" src='../../image/top.png'/>
+
+    <!--footer template模板-->
+    <import src="../footer/footer.wxml"/>
+    <template is="footer" data="{{tabbarArray}}"/>
+

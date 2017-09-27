@@ -1,0 +1,74 @@
+/* pages/mycoupons/mycoupons.wxss */
+page{
+  background:#f2f2f2;
+}
+.coupon-head{
+  padding-bottom:20rpx;
+  display:flex;
+  width:750rpx;
+  height:99rpx;
+  border-bottom:1rpx solid #e5e5e5;
+  background:#fff;
+}
+.coupon-head view{
+  float:left;
+  flex:1;
+  height:99rpx;
+  border-right:1rpx solid #ccc;
+  background:#fff;
+  text-align:center;
+  font-size:30rpx;
+  color:#333;
+  line-height:99rpx;
+}
+.coupon-head view:last-child{
+  border-right:0;
+}
+.coupon-head view.active{
+  color:#24affd;
+  background:#f2f2f2;
+}
+/*优惠券内容 */
+.coupon-body{
+  padding-top:1rpx;
+  width:750rpx;
+  min-height:100%;
+  background:#f2f2f2;
+}
+.coupon{
+  margin:30rpx auto 0;
+  width:690rpx;
+  height:208rpx;
+  background:#fff;
+  border-radius:10rpx;
+}
+.coupon .coupon-left{
+  position:relative;
+}
+.coupon .coupon-left .select{
+  position:absolute;
+  top:14rpx;
+  left:12rpx;
+  width:36rpx;
+  height:36rpx;
+  border-radius:50%;
+  border:2rpx solid #26b1fe;
+}
+.coupon .coupon-left .select image{
+  margin-top:8rpx;
+  margin-left:10rpx;
+  width:20rpx;
+  height:16rpx;
+}
+.coupon .coupon-left .select icon{
+  float:left;
+  width:36rpx;
+  height:36rpx;
+  color:#26b1fe;
+}
+.coupon .coupon-left .select.active{
+  /*background:#26b1fe;*/
+}
+.coupon .coupon-right{
+
+}

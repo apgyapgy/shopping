@@ -7,6 +7,47 @@
   width:750rpx;
   height:150px;
 }
+.scrollview{
+  position:absolute; 
+  top:0; 
+  left:0; 
+  right:0; 
+  bottom:0;
+}
+
+/*定位*/
+.location{
+  position:absolute;
+  top:50rpx;
+  left:50%;
+  transform:translateX(-50%);
+  min-width:246rpx;
+  height:50rpx;
+  line-height:50rpx;
+  background:#eaf7ff;
+  border-radius:25rpx;
+}
+.location .location-icon{
+  float:left;
+  margin:12rpx 0 0 30rpx;
+  width:26rpx;
+  height:30rpx;
+}
+.location .location-down-icon{
+  float:left;
+  margin-top:20rpx;
+  margin-right:30rpx;
+  width:18rpx;
+  height:16rpx;
+}
+.location .location-name{
+  float:left;
+  padding-left:10rpx;
+  padding-right:10rpx;
+  font-size:28rpx;
+  color:#57aafe;
+}
+
 /*附近的商户标题*/
 .con-title{
   display:flex;
@@ -51,6 +92,7 @@
   line-height:45rpx;
   font-size:30rpx;
 }
+
 /*暂无商户*/
 .no-shop{
   width:750rpx;
@@ -69,6 +111,7 @@
   font-size:24rpx;
   color:#8f8f8f;
 }
+
 /*商铺们*/
 .shops{
   width:750rpx;
@@ -148,45 +191,20 @@
   color:#fc5f4e;
   font-size:24rpx;
 }
-/*footer*/
-.footer{
-  position:fixed;
-  left:0;
-  bottom:0;
-  display:flex;
-  width:750rpx;
-  height:98rpx;
-  background:#f7f7fa;
-  border-top:1rpx solid #eee;
-}
-.footer navigator{
-  flex:1;
-  height:98rpx;
-}
-.footer navigator image{
-  display:block;
-  margin:20rpx auto 0;
-  width:40rpx;
-  height:40rpx;
-}
-.footer navigator text{
-  display:block;
-  color:#7f8389;
-  font-size:24rpx;
-  height:34rpx;
-  width:100%;
-  text-align:center;
-}
-.footer navigator.active text{
-  color:#6ab3fe;
-}
+
 /*返回顶部*/
 .top{
+  display:none;
   position:fixed;
   bottom:280rpx;
   right:30rpx;
   width:80rpx;
   height:80rpx;
   border-radius:50%;
-  
 }
+.top.active{
+  display:block;
+}
+
+/*footer*/
+@import "../footer/footer.wxss"
