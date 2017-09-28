@@ -1,4 +1,8 @@
 /* pages/footer/footer.wxss */
+.padding-100{
+  width:750rpx;
+  height:100rpx;
+}
 /*footer*/
 .footer{
   position:fixed;

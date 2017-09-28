@@ -224,7 +224,6 @@
     </view>
   </scroll-view>
     <!--返回顶部-->
-    {{item.active==true?'active':''}}
     <image catchtap="goTop" class="'top' {{backTopIconShowFlag==true?'active':''}}" src='../../image/top.png'/>
 
     <!--footer template模板-->
