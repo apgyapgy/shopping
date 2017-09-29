@@ -18,9 +18,15 @@ page{
   height:88rpx;
   background:#fff;
   border-top:1rpx solid #e5e5e5;
-  text-align:center;
+}
+.area-name-wrap{
+  float:left;
+  position:relative;
+  left:50%;
 }
 .area-name image{
+  position:relative;
+  right:50%;
   float:left;
   margin-top:26rpx;
   margin-right:14rpx;
@@ -28,6 +34,8 @@ page{
   height:37rpx;
 }
 .area-name text{
+  position:relative;
+  right:50%;
   float:left;
   height:88rpx;
   line-height:88rpx;

@@ -4,8 +4,10 @@
 
     <view class='car-area clearfix'>
       <view class='area-name active'>
-        <image src="../../image/area_active.png"/>
-        <text>浦东新区-508小区</text>
+        <view class='area-name-wrap'>
+          <image src="../../image/area_active.png"/>
+          <text>浦东新区-508小区</text>
+        </view>
       </view>
       <view class='car-order clearfix'>
         <view class='car-name'>
@@ -30,13 +32,31 @@
               <text class='car-good-num'>X2</text>
             </view>
           </view>
+          <view class='car-good'>
+            <image src="../../image/good.png"/>
+            <text class="car-good-name">上海本地蕃茄500g</text>
+            <view class='car-good-info'>
+              <text class='car-good-price'>￥1.8</text>
+              <text class='car-good-num'>X2</text>
+            </view>
+          </view>
+          <view class='car-good'>
+            <image src="../../image/good.png"/>
+            <text class="car-good-name">上海本地蕃茄500g</text>
+            <view class='car-good-info'>
+              <text class='car-good-price'>￥1.8</text>
+              <text class='car-good-num'>X2</text>
+            </view>
+          </view>
         </view>
       </view>
     </view>
     <view class='car-area clearfix'>
       <view class='area-name'>
-        <image src="../../image/area.png"/>
-        <text>浦东新区-508小区</text>
+        <view class='area-name-wrap'>
+          <image src="../../image/area_active.png"/>
+          <text>虹口区-中山北一路865弄小区</text>
+        </view>
       </view>
       <view class='car-order clearfix'>
         <view class='car-name'>
@@ -61,13 +81,31 @@
               <text class='car-good-num'>X2</text>
             </view>
           </view>
+          <view class='car-good'>
+            <image src="../../image/good.png"/>
+            <text class="car-good-name">上海本地蕃茄500g</text>
+            <view class='car-good-info'>
+              <text class='car-good-price'>￥1.8</text>
+              <text class='car-good-num'>X2</text>
+            </view>
+          </view>
+          <view class='car-good'>
+            <image src="../../image/good.png"/>
+            <text class="car-good-name">上海本地蕃茄500g</text>
+            <view class='car-good-info'>
+              <text class='car-good-price'>￥1.8</text>
+              <text class='car-good-num'>X2</text>
+            </view>
+          </view>
         </view>
       </view>
     </view>
     <view class='car-area clearfix'>
       <view class='area-name'>
-        <image src="../../image/location.png"/>
-        <text>浦东新区-508小区</text>
+        <view class='area-name-wrap'>
+          <image src="../../image/area_active.png"/>
+          <text>虹口区-中山北一路865弄小区</text>
+        </view>
       </view>
       <view class='car-order clearfix'>
         <view class='car-name'>
@@ -96,7 +134,7 @@
       </view>
     </view>
     <view class='clear-invalid'>
-      <button>清空失效商品</button>
+      <button bindtap="clearInvalid">清空失效商品</button>
     </view>
   </view>
   <view class='padding-100'></view>

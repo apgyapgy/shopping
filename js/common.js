@@ -27,6 +27,29 @@ var basicParms = {
   clientVersion: '1.0.0',
   serial: getSerial().toString(),
 };
+var getAjax = function(options){
+  if (wx.showLoading) {
+    wx.showLoading({
+      title: '加载中',
+    })
+  }
+  return wx.request({
+    url: baseUrl + options.url,
+    data: options.params,
+    method: options.method?options.method:'GET',
+    success: options.success,
+    fail: function (res) {
+      if(options.fail){
+        options.fail(res)
+      }
+    },
+    complete: function () {
+      if (wx.hideLoading) {
+        wx.hideLoading()//关闭提示
+      }
+    }
+  });
+}
 var ajaxAsync = function (options) {
   if (wx.showLoading) {
     wx.showLoading({
@@ -40,7 +63,7 @@ var ajaxAsync = function (options) {
     return wx.request({
       url: baseUrl + options.url,
       data: parms,
-      method: 'POST',
+      method: options.method,
       header: {
         'content-type': 'application/json',
         'Cookie': 'JSESSIONID=' + sid
@@ -192,5 +215,6 @@ module.exports = {
   payOrderInf: payOrderInf,
   getWeinxinPay: getWeinxinPay,
   layer: layer,
-  clearSession: clearSession
+  clearSession: clearSession, 
+  getAjax: getAjax
 } 

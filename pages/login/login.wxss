@@ -28,9 +28,22 @@
 }
 .sendYzm{
   position: absolute;
-  height: 34px;
   right: 3px;
   top: 3px;
+  float:left;
+  width:200rpx;
+  height: 34px;
+  font-size:28rpx;
+  line-height:34px;
+  border-radius:10rpx;
+  background:#1aad19;
+  text-align:center;
+  color:#fff;
+  cursor:pointer;
+  z-index:2;
+}
+.sendYzm.disabled{
+  background:#9ed99d;
 }
 .mobile,.inputYzm{
   height:40px;

@@ -121,5 +121,8 @@ Page({
         });
       }
     }
+  },
+  clearInvalid:function(){//清空失效商品
+
   }
 })
