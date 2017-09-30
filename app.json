@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/shoppingcat/shoppingcart",
+    "pages/shop/shop",
     "pages/index/index",
+    "pages/shoppingcat/shoppingcart",
     "pages/template/tabbar",
     "pages/logs/logs",
     "pages/login/login",
